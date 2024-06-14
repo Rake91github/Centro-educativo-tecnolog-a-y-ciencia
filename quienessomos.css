@@ -7,8 +7,13 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 /*PAGINA DE INICIO*/
@@ -20,13 +25,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.header .informacion{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    padding: .5rem;
 }
 .header .informacion{
     width: 30%;
@@ -60,6 +59,7 @@ nav{
     justify-content:center;
     align-items: center;
     border-top: 10px solid #ea555a;
+    position: relative;
 }
 nav .contenedor-nav-inicio{
     display: flex;
@@ -97,7 +97,7 @@ nav.sticky{
 }
 /* logo icono X */
 .logo-close{
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: white;
     display: none;
 }
@@ -218,12 +218,12 @@ nav.sticky{
 /*              quienes somos       */
 .about-second{
     width: 100%;
-    height: 130vh;
+    min-height: 130vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 5rem 1rem 5rem;
+    padding: 3rem;
 }
 
 .about-second h1{
@@ -235,24 +235,25 @@ nav.sticky{
 }
 .about-second p{
     font-size: 1rem;
-    padding-bottom: 2rem;
     text-align: center;
 }
+
 /**/
 .about-second .container-about{
-    display: grid;
     width: 100%;
+    height: 100%;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    justify-content: left;
-    align-items: top;
 }
+
 .container-about div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    height: 290px;
+    height: 350px;
+    width: 100%;
 }
 .container-about .boxone{
     background-image: linear-gradient(#00000080 , #00000080), url('imagenes/ubicacion.png');
@@ -315,36 +316,32 @@ nav.sticky{
 
 /*seccion conoce nuestras instalaciones*/
 /*SECCION GRANDE SLIDER*/
-    .admisiones-grande{
-        width: 100%;
-        height:70vh;
-        display: flex;
-        flex-direction: space-between;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem 4rem;
-    }
-.cont-admi-grande{
+
+.container-admmissions{
+    width: 100%;
+    min-height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    padding: 3rem;
 }
-
-.cont-admi-grande .info-admi-grande p{
+.article-information{
+    width: 100%;
+    min-height: 100%;
+}
+.article-information p{
     font-size: 20px;
     padding: 1rem;
 }
-
-.admisiones-grande .slider-admisiones-grande{
-    height: 350px;
+.container-admmissions .carousel{
     width: 100%;
+    height: 100%;
 }
-/**/
-.informacion-2-grande p{
-    font-size: 22px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.container-admmissions .carousel img{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -446,16 +443,52 @@ nav.sticky{
         font-size: 1.3rem;
     }
 }
+/*------------------------------*/
+
+@media (max-width: 539px){
+    .banner-about-us{
+        background-image: url(imagenes/banner-quienes-somos2.jpg);
+        min-height: 50vh;
+        background-size: 100% 100%;
+        background-position: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        z-index: 1;
+    }
+    .banner-about-us::before{
+        content:'';
+        background: rgba(24, 19, 19, 0.63);
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+    }
+    /**/
+    .banner-about-us .figure-about{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+
+    }
+    /**/
+    .figure-about-second{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+
+    }
+/*------------------------------*/
+}
+
+
 
 @media (max-width: 1075px){
-    .about-second{
-        width: 100%;
-        height: 190vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem 5rem;
-    }
     .about-second .container-about{
         display: grid;
         grid-template-columns: repeat(3, 2fr);
@@ -478,7 +511,7 @@ nav.sticky{
     .nav-footer h2{
         font-size: 1.5rem;
     }
-    .header .informacion{
+    .header .informacion{   /*----logo*/
         width: 40%;
         height: 110px;
     }
@@ -499,6 +532,26 @@ nav.sticky{
 
 }
 
+@media (max-width: 994px){
+    .container-admmissions{
+        width: 100%;
+        min-height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+    }
+}
+@media (max-width: 450px){
+    .container-admmissions{
+        padding: 2rem 1rem;
+    }
+}
+
+
+
 @media (max-width: 847px){
     .section-fig h2 .text-br{
         display: block;
@@ -510,12 +563,11 @@ nav.sticky{
     .enlaces{
         display: flex;
         justify-content: space-between;
-
     }
     nav .contenedor-nav-inicio{
         overflow: hidden;
         position: absolute;
-        top: 25%;
+        top: 0;
         right: 0;
         width: 70%;
         height: 500vh;
@@ -610,11 +662,6 @@ nav.sticky{
 }
 
 @media (max-width: 860px){
-    .about-second{
-        width: 100%;
-        height: 200vh;
-        padding: 6rem 2rem; 
-    }
     .about-second .container-about{
         display: grid;
         grid-template-columns: repeat(2, 3fr);
@@ -634,12 +681,8 @@ nav.sticky{
         font-size: 2.7rem;
     }
 }
-@media (max-width: 520px){
-    .about-second{
-        width: 100%;
-        height: 350vh;
-        padding: 5rem 2rem; 
-    }
+/*--------------------------------------*/
+@media (max-width: 539px){
     .about-second .container-about{
         display: grid;
         grid-template-columns: repeat(1, 4fr);
@@ -647,39 +690,9 @@ nav.sticky{
         justify-content: left;
     }
 }
-@media (max-width:876px){
-    .admisiones-grande{
-        width: 100%;
-        height:75vh;
-        padding: 2rem 1rem;
-    }
-}
-@media (max-width: 780px){
-    .admisiones-grande{
-        width: 100%;
-        height:130vh;
-        padding: 2rem 1rem;
-    }
-    .cont-admi-grande{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
-    }
-}
-@media (max-width: 545px){
-    .admisiones-grande{
-        width: 100%;
-        height:140vh;
-        padding: 1rem 1rem;
-    }
-}
-@media (max-width: 484px){
-    .admisiones-grande{
-        width: 100%;
-        height:150vh;
-        padding: 2rem 1rem;
-    }
-}
+
+
+
 
 @media (max-width: 1100px){
     .texto-quienessomos{

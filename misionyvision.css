@@ -7,8 +7,13 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 /*PAGINA DE INICIO*/
@@ -54,6 +59,7 @@ nav{
     justify-content:center;
     align-items: center;
     border-top: 10px solid #ea555a;
+    position: relative;
 }
 nav .contenedor-nav-inicio{
     display: flex;
@@ -442,7 +448,7 @@ nav.sticky{
     nav .contenedor-nav-inicio{
         overflow: hidden;
         position: absolute;
-        top: 25%;
+        top: 0;
         right: 0;
         width: 70%;
         height: 500vh;
@@ -496,8 +502,8 @@ nav.sticky{
 
 @media (max-width: 1100px){
     .banner-visionymision-mediano .visionymisionlibro{
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 220px;
     }
     .banner-visionymision-mediano .visionymisionlogo{
         width: 320px;
@@ -509,8 +515,8 @@ nav.sticky{
         width: 80%;
     }
     .banner-visionymision-mediano .visionymisionlibro{
-        width: 230px;
-        height: 230px;
+        width: 180px;
+        height: 180px;
     }
     .banner-visionymision-mediano .visionymisionlogo{
         width: 290px;
@@ -535,8 +541,8 @@ nav.sticky{
         width: 100%;
     }
     .banner-visionymision-mediano .visionymisionlibro{
-        width: 170px;
-        height: 170px;
+        width: 120px;
+        height: 120px;
     }
     .banner-visionymision-mediano .visionymisionlogo{
         width: 220px;
@@ -544,14 +550,14 @@ nav.sticky{
     }
     .banner-visionymision-mediano {
         width: 100%;
-        min-height: 60vh;
+        min-height: 55vh;
     }
     .banner-visionymision-mediano::before{
         content: '';
         background: rgba(24, 19, 19, 0.63);
         position: absolute;
         width: 100%;
-        height: 60vh;
+        height: 55vh;
     }
 }
 
@@ -666,76 +672,7 @@ nav.sticky{
 
 
 /*nav slider-end*/
-@media (max-width: 1100px){
-    .carruseles{
-        width: 350%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 987px){
-    .carruseles{
-        width: 380%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 891px){
-    .carruseles{
-        width: 430%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 789px){
-    .carruseles{
-        width: 490%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 703px){
-    .carruseles{
-        width: 530%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 647px){
-    .carruseles{
-        width: 600%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 570px){
-    .carruseles{
-        width: 620%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 495px){
-    .carruseles{
-        width: 760%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 451px){
-    .carruseles{
-        width: 820%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 425px){
-    .carruseles{
-        width: 870%;
-        height: 100%;
-        display: flex;
-    }
-}
+
 /*----------------*/
 
 /*          MEDIA QUERY FOOTER          */

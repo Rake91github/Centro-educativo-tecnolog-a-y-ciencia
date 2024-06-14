@@ -7,6 +7,9 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html{
+    overflow-x: hidden;
+}
 
 body{
     overflow-x: hidden;
@@ -93,7 +96,7 @@ nav.sticky{
 }
 /* logo icono X */
 .logo-close{
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: white;
     display: none;
 }
@@ -226,15 +229,16 @@ nav.sticky{
 /*======    SECTION HISTORIA   =====*/
 .section-his{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 3rem 6rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
     justify-content: center;
     align-items: center;
-    padding: 1rem 4.5rem;
+    gap: 1rem;
 }
 .section-his .info-his{
+    width: 100%;
     background: #faefef;
     color: rgb(36, 36, 36);
     padding: 1rem;
@@ -264,18 +268,20 @@ nav.sticky{
 }
 /**/
 .section-his .info-slider{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .info-slider .slider{
-    width: 90%;
-    height: 400px;
+    width: 95%;
+    min-height: 470px;
 }
 .info-slider .slider .carousel .carousel-item img{
     width: 100%;
-    height: 400px;
+    height: 470px;
 }
 .info-slider h2{
     padding: .5rem 0px;
@@ -283,6 +289,7 @@ nav.sticky{
 }
 .info-slider .section-button{
     width: 100%;
+    min-height: 45px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -298,7 +305,7 @@ nav.sticky{
     color: white;
 }
 .info-slider .blue{
-    background: #061930;
+    background: #F7d51d;
     color: white;
 }
 .info-slider .red{
@@ -310,15 +317,14 @@ nav.sticky{
 /*======    INICIO-2PARTE   =====*/
 .programas-educativos{
     width: 100%;
-    min-height: 175vh;
+    min-height: 170vh;
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 3rem;
+    padding: 2rem 3rem;
     overflow: hidden;
-    overflow-x: hidden;
 }
 .programas-educativos h1{
     text-align: center;
@@ -333,7 +339,7 @@ nav.sticky{
     justify-content: center;
     align-items: center;
 }
-.container-cards article{
+.container-cards{
     width: 80%;
     height: 240px;
     display: grid;
@@ -550,38 +556,36 @@ nav.sticky{
     }
 }
 
+@media (max-width: 475px){
+    .header .informacion{
+        width: 70%;
+        height: 110px;
+    }
+}
+@media (max-width: 479px){
+    .header .informacion{
+        width: 55%;
+        height: 110px;
+    }
+}
+@media (max-width: 911px){
+    .header .informacion{
+        width: 40%;
+        height: 110px;
+    }
+}
 /*SECCION BANNER PRINCIPAL*/
 @media (max-width: 1091px){
     #banner-principal-inicio .banner-articulo-inicio img{
-        height:300px;
+        height:270px;
     }  /*  */
     .banner-articulo-inicio .titulo-inicio h2{
         font-size: 3rem; 
     }   /*  */
-    .section-his{
-        padding: 2rem 2rem;
-        height: 110vh;
-    }
-    .section-his .info-his h2{
-        font-size: 1.3rem;
-    }
 }
 
 /**/
 @media (max-width: 1075px){
-    /*======    INICIO-2PARTE   =====*/
-    .programas-educativos{
-        width: 100%;
-        min-height: 220vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem ;
-        overflow: hidden;
-        overflow-x: hidden;
-    }
-
     .programas-educativos .container-cards{
         width: 100%;
         height: 100%;
@@ -592,7 +596,7 @@ nav.sticky{
     }
     .container-cards article{
         width: 100%;
-        height: 240px;
+        min-height: 225px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.7rem;
@@ -605,14 +609,18 @@ nav.sticky{
         width: 400px;
         height: 100%;
     }
-
 }
-/**/
+
+/*          figura          */
 @media (max-width: 1028px){
     .section-fig h2{
         font-size: 1.3rem;
     }
-    
+}
+@media (max-width: 847px){
+    .section-fig h2 .text-br{
+        display: block;
+    }
 }
 
 /*          */
@@ -647,10 +655,6 @@ nav.sticky{
     .nav-footer h2{
         font-size: 1.5rem;
     }
-    .header .informacion{
-        width: 40%;
-        height: 110px;
-    }
     
 }
 
@@ -676,42 +680,44 @@ nav.sticky{
     }
 }
 
+
+
+@media (max-width: 1032px){
+    .section-his{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+}
 @media (max-width: 847px){
     .section-his{
         width: 100%;
         padding: 2rem 1rem;
-        height: 210vh;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .section-his .info-his h2{
-        font-size: 1rem;
-        font-weight: 600;
+    .section-his .info-his{
+        width: 100%;
+        background: #faefef;
+        color: rgb(36, 36, 36);
+        padding: 1rem;
     }
-    .section-fig h2 .text-br{
-        display: block;
+    .section-his .info-slider{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
-    
 }
 
 /*          */
 @media (max-width: 785px){
     /*======    INICIO-2PARTE   =====*/
-
-    .programas-educativos{
-        width: 100%;
-        min-height: 220vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 4rem 2rem;
-        overflow: hidden;
-        overflow-x: hidden;
-    }
     
     .programas-educativos .container-cards{
         width: 100%;
@@ -747,8 +753,12 @@ nav.sticky{
         justify-content: left;
         align-items: center;
     }
-
-
+}
+@media (max-width:509px){
+    .programas-educativos{
+        padding: 2rem 1rem;
+        overflow: hidden;
+    }
 }
 
 /*FORMATO PARA DISEÑO RESPONSIVE PHONE*/
@@ -770,7 +780,7 @@ nav.sticky{
         justify-content: space-between;
 
     }
-    nav .contenedor-nav-inicio{
+    .contenedor-nav-inicio{
         overflow: hidden;
         position: absolute;
         top: 0;
@@ -836,10 +846,7 @@ nav.sticky{
     .footer-inicio .footer-contact button{
         width: 100%;
     }
-    .header .informacion{
-        width: 55%;
-        height: 110px;
-    }
+    
 }
 
 
@@ -888,83 +895,105 @@ nav.sticky{
     }
 }
 
-@media (max-width:539px){
+@media (max-width:539px){   /*--------------------------phone*/
     #banner-principal-inicio .banner-articulo-inicio{
         padding: 1rem;
     }
-}
+    #banner-principal-inicio{
+        background-image: url(imagenes/carousel1.jpeg);
+        min-height: 50vh;
+        background-size: 100% 100%;
+        background-position: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        position: relative;
+    }
+    #banner-principal-inicio::before{
+        content:'';
+        background: rgba(26, 26, 26, 0.63);
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+    }
+    
+    #banner-principal-inicio .banner-articulo-inicio img{
+        height:140px;
+    }
+    
+    .banner-articulo-inicio .titulo-inicio h2{
+        font-size: 1.3rem; 
+    }  /*  */
+    .titulo-inicio h3{
+        font-size: 1.1rem;
+    }
+    
 
-/*nav slider-end*/
-@media (max-width: 1100px){
+}
+/*---------------------------------------------------*/ 
+
+@media (max-width: 495px){
+    .slider-end{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        background: #283048;
+        background: white;
+        margin-top: 1rem;
+    }
+    .container-carousel{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
     .carruseles{
-        width: 350%;
+        width: 400%;
         height: 100%;
         display: flex;
     }
-}
-@media (max-width: 987px){
-    .carruseles{
-        width: 380%;
+    .slider-section img{
+        width: 130px;
         height: 100%;
-        display: flex;
     }
-}
-@media (max-width: 891px){
-    .carruseles{
-        width: 430%;
+    .slider-section{
+        width: calc(100% / 5);
         height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 789px){
-    .carruseles{
-        width: 490%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 703px){
-    .carruseles{
-        width: 530%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 647px){
-    .carruseles{
-        width: 600%;
-        height: 100%;
-        display: flex;
-    }
-}
-@media (max-width: 570px){
-    .carruseles{
-        width: 620%;
-        height: 100%;
-        display: flex;
     }
 }
 @media (max-width: 495px){
+    .slider-end{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        background: #283048;
+        background: white;
+        margin-top: 1rem;
+    }
+    .container-carousel{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
     .carruseles{
-        width: 760%;
+        width: 400%;
         height: 100%;
         display: flex;
     }
-}
-@media (max-width: 451px){
-    .carruseles{
-        width: 820%;
+    .slider-section img{
+        width: 130px;
         height: 100%;
-        display: flex;
+    }
+    .slider-section{
+        width: calc(100% / 5);
+        height: 100%;
     }
 }
-@media (max-width: 425px){
-    .carruseles{
-        width: 870%;
-        height: 100%;
-        display: flex;
-    }
-}
+
 /*----------------*/
 
 /*              */
@@ -1023,22 +1052,9 @@ nav.sticky{
     
 }
 
-@media (max-width: 475px){
-    .header .informacion{
-        width: 70%;
-        height: 110px;
-    }
-}
 
-@media (max-width: 442px){
-    .programas-educativos{
-        width: 100%;
-        min-height: 220vh;
-        padding: 4rem 1rem;
-        overflow: hidden;
-        overflow-x: hidden;
-    }
-}
+
+
 
 
 
