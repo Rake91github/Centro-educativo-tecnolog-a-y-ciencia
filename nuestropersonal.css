@@ -184,25 +184,26 @@ nav.sticky{
 
 
 /*  */
-.banner-title{
-    background-image: url(imagenes/banner_nuestropersonal.jpg);
-    background-size: cover;
-    background-position: center;
+.section-title{
     width: 100%;
-    min-height: 40vh;
-    display: grid;
-    place-content: center;
+    min-height: 50vh;
+    background: url('imagenes/banner_nuestropersonal.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
+    overflow: hidden;
+    position: relative;
 }
-.banner-title::before{
+.section-title::before{
     content: '';
     background: rgba(24, 19, 19, 0.63);
     position: absolute;
     width: 100%;
-    height: 40vh;
+    min-height: 50vh;
 }
 
-.banner-title h2{
+.section-title h2{
     color: white;
     font-size: 3.5rem;
     z-index: 2;
@@ -240,7 +241,7 @@ nav.sticky{
 /*======================*/
 .slider-end{
     width: 100%;
-    height: 40vh;
+    min-height: 40vh;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -312,7 +313,7 @@ nav.sticky{
     border: 2px solid #001868;    
     padding: 1rem 1rem;
     border-radius: 5px;
-    margin-top: .5rem;
+    margin-top: 1rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -496,19 +497,24 @@ nav.sticky{
 
 
 /*===       ======*/
-@media (max-width: 894px){
-    .banner-title h2{
-        font-size: 2.7rem;
+@media (max-width: 850px){
+    .section-title h2{
+        font-size: 3rem;
     }
 }
-@media (max-width: 666px){
-    .banner-title h2{
-        font-size: 2.2rem;
+@media (max-width: 720px){
+    .section-title h2{
+        font-size: 2.5rem;
     }
 }
-@media (max-width: 520px){
-    .banner-title h2{
-        font-size: 1.7rem;
+@media (max-width: 572px){
+    .section-title h2{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 425px){
+    .section-title h2{
+        font-size: 1.6rem;
     }
 }
 

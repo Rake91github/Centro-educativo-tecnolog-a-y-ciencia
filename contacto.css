@@ -194,7 +194,6 @@ nav.sticky{
     padding: 1rem 2rem;
     overflow: hidden;
     overflow-x: hidden;
-
 }
 
 .container-contact-form{
@@ -257,61 +256,61 @@ form .div-button .button:hover{
 form .container-inputs{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    gap: .5rem;
-    margin: 1.5rem 0px;
+    gap: 1rem;
+    margin: 1rem 0px;
 }
 .container-inputs .div-input input{
-    width: 85%;
-    padding: .5rem;
+    width: 100%;
+    padding: .7rem;
     font-size: .9rem;
     border: none;
     outline: none;
     border: 1px solid rgb(206, 206, 206);
-    margin-left: -7px;
+    position: relative;
 }
 .div-input i{
-    padding: .45rem .5rem;
+
     border: 1px solid rgb(206, 206, 206);
-    display: inline-block;
     vertical-align: top;
-    margin-right: -1px;
     color: rgb(206, 206, 206);
+    position: absolute;
+
 }
 form .div-input-textarea{
     padding: 1rem 0px;
 }
 .div-input-phone input{
-    width: 42%;
-    padding: .5rem;
+    width: 100%;
+    padding: .7rem;
     font-size: .9rem;
     border: none;
     outline: none;
     border: 1px solid rgb(206, 206, 206);
-    margin-left: -7px;
+    position: relative;
 }
 .div-input-phone i{
     padding: .44rem .5rem;
     border: 1px solid rgb(206, 206, 206);
     display: inline-block;
     vertical-align: top;
-    margin-right: -1px;
     color: rgb(206, 206, 206);
+    position: absolute;
 }
 .div-input-textarea{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: -5px;
     width: 100%;
     margin: 1rem 0px;
 }
 .div-input-textarea textarea{
-    width: 93%;
+    width: 100%;
     border: 1px solid rgb(206, 206, 206);
     padding: .5rem;
     outline: none;
     resize: none;
     font-size: .9rem;
+    position: relative;
 }
 .div-input-textarea i{
     padding: .44rem .5rem;
@@ -320,6 +319,7 @@ form .div-input-textarea{
     vertical-align: top;
     margin-right: -1px;
     color: rgb(206, 206, 206);
+    position: absolute;
 }
 /*UBICACION*/
 
@@ -427,7 +427,7 @@ form .div-input-textarea{
     border: 2px solid #001868;    
     padding: 1rem 1rem;
     border-radius: 5px;
-    margin-top: .5rem;
+    margin-top: 1rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -635,32 +635,6 @@ form .div-input-textarea{
     
 }
 
-@media (max-width: 955px){
-    form .container-inputs{
-        display: grid;
-        grid-template-columns: repeat(1, 3fr);
-        gap: 1rem;
-    }
-    .container-inputs .div-input input{
-        width: 92%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    .div-input-phone input{
-        width: 92%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    
-}
 
 @media (max-width: 886px){
     .container-contact-form{
@@ -670,30 +644,6 @@ form .div-input-textarea{
         display: grid;
         grid-template-columns: repeat(1, 2fr);
         gap: 1rem;
-    }
-    form .container-inputs{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        gap: .5rem;
-        margin: 1.5rem 0px;
-    }
-    .container-inputs .div-input input{
-        width: 88%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    .div-input-phone input{
-        width: 42%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
     }
 }
 @media (max-width: 699px){
@@ -711,24 +661,7 @@ form .div-input-textarea{
         gap: 1.5rem;
         margin: 1.5rem 0px;
     }
-    .container-inputs .div-input input{
-        width: 94%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    .div-input-phone input{
-    width: 94%;
-    padding: .5rem;
-    font-size: .9rem;
-    border: none;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    margin-left: -7px;
-    }
+
 }
 @media (max-width: 690px){
     .container-contact-form{
@@ -739,8 +672,6 @@ form .div-input-textarea{
         grid-template-columns: repeat(1, 2fr);
         gap: 1rem;
     }
-}
-@media (max-width: 653px){
     .container-contact-form{
         width: 100%;
         height: auto;
@@ -749,90 +680,15 @@ form .div-input-textarea{
         grid-template-columns: repeat(1, 2fr);
         gap: 1rem;
     }
-}
-@media (max-width: 590px){
-    .container-inputs .div-input input{
-        width: 93%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    .div-input-phone input{
-    width: 93%;
-    padding: .5rem;
-    font-size: .9rem;
-    border: none;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    margin-left: -7px;
-    }
-}
-@media (max-width: 515px){
-    .container-inputs .div-input input{
-        width: 92%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    .div-input-phone input{
-    width: 92%;
-    padding: .5rem;
-    font-size: .9rem;
-    border: none;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    margin-left: -7px;
-    }
-}
-@media (max-width: 458px){
-    .container-inputs .div-input input{
-        width: 91%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    .div-input-phone input{
-    width: 91%;
-    padding: .5rem;
-    font-size: .9rem;
-    border: none;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    margin-left: -7px;
-    }
-}
-@media (max-width: 415px){
-    .container-inputs .div-input input{
-        width: 90%;
-        padding: .5rem;
-        font-size: .9rem;
-        border: none;
-        outline: none;
-        border: 1px solid rgb(206, 206, 206);
-        margin-left: -7px;
-    }
-    .div-input-phone input{
-    width: 90%;
-    padding: .5rem;
-    font-size: .9rem;
-    border: none;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    margin-left: -7px;
+    form .container-inputs{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        gap: 1.5rem;
+        margin: 1.5rem 0px;
     }
 }
 
-/*      FOOTER-------*/
-/*nav slider-end*/
+
 
 /*----------------*/
 /*          MEDIA QUERY FOOTER          */
